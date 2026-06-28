@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0710" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Trybnus Bible" />
+  <title>Trybnus Bible Study</title>
+  <link rel="apple-touch-icon" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAB4AHgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDzNDVhBVaI1ah5Ir7JyPzuRYhWrsCcd6it0zWpawE44rOUzmnISCHParsNtkdK5zxF4stvD2oiyuLCeZjGHDKwAOfrWYPH2u6tOLHw1oEklzJwmxGmkz7KBiuaddLdl08FiK1nCOjOz1O4sNLtzPqN1Fbp23HlvoOprkb74h6RE+y2sri4H95iEBrtPAn7PXijxLdLrPxE1VtGtX+Yws4e6cemOifz9q968M+CPhr4RtFtdI8KWl06j5rm8QSSOfUs2T/Kvn8y4py7Lv49VJ9t39y1Po8DwtVrK8k3+CPk20+IWlTSBLixuIB3ZWDgfhXU2M1lqVqLmwuI54j1KnkexHavd9f0n4PeNZ59BvtG0QXyA7v7PljS5i9/l54/GvnH4qeBNV+DniW01PS706l4fv2K287DBOOTDKOgYDkHvRlfE+BzGXJRn729mmnbvZ20Fj+Gp0Ic8f8ANGncW5Has64i5PFaOka9omurtsbsefjJgk+Vx+B6/hRewbSeK+jhVufMWlTlyyVmc/OmCeKpy9fatS7TBrMnGM1upXOunqVXOKKbKexoq7nQkbfh/wAe6FAToPiHRohZxnAuogWcH+8w6/iOldavhG21K1GoeFtTgv7ZuQu8Ej2z/Q4rw27hjl8SrbzMyxyzIrsvUKSASPevXdV+DHxC8KMNf8CX0mtWQ+cNZttuFX0eI/e/DNefUzelSqKhXau9uj+XcdXh2rVg8RhJOL69Yt+a6fItf2VfWUmy8tJYT/tLx+dbGn2m7HFc3o/xs1bTJ/7O8ZeHfNdDtkKoYZB9UYY/lXdaF47+F+uMuzVBpVw3/LO4Uxc/X7tVVlFq8GfP1qeYUHatRbXeOq+7dGN4x8CweKNKEQKw30QJt5iOAf7rf7J/SuD8O+MfG3wruTpGo6e/2ZWygI28eqSYww9v5V9J6LZaZdoJNP1K1vI+xilVv5GvEf2steK6hpvg+1IxCourkDrvbhB+WT+NeLjMLSxsXh8RDmiz2uHs2xNCuo0tPXp9/wCR0fhb4xa14quTa6dpckAQAzXMhXbGPwzk+1dHc6nMIGSe9lYvnJ3dSR1rzjwVDH4d8OwWqqDM675D6uf8OlWbzVNiPNM+ABkmvEx2FybhJKODw8Z4iWt5a8q6b9fQ/Rcj4fznjycqmJrOlg4O3upJza3+Xrf0KHhfQtbg8S6Abmx0bTrPRL2W6l1mJgLi7RiTskOefTmvQvF3xW8Ax2T6XrtpBr1mzBmtpY90ZYdGHfI9RXhfjfxXdGEIrbdx/dR54H+0fWtL4B/DL/hYV/e6nq88y6ZZsqy7D880h5257DHU149PJsRndeGPx0+Rw25NP8z6XiCWU8K0ZYamnUk9Wm9F2vbd+SsZvxE1X4aai4vvBGk6zoWoKwPkhw9ufcZO5D9Mit7wLr0uvaY8F4rfbbYDexXHmL2b6+te7N4c8C+FbIREaPpUKDG5ygY+5Lck1x+u/Ez4XaKWFvP/AGrcL/Dawbhn/eOBX3OBoujDlUm/8Tv+h+KZlnbzFtUsM79LX/X/ADORXQ9Sv322dnLIM/exhR+J4q3P4S03RrX+0PFerwWcI58pW5b2z1P4CsvUPjB4s8SznTfBHht42bhTHEbiX8gNq1Lp3wO8aasH1/4h6o2lW4QyMksnnXb8ZwFzhPx/KvRr5jhcDT9pWktO+i/4JlgsmzXHSUZfu12Wsvv2RzviHxvo2oY0LQtFijshytzIMSZHcD396K8/0QKNXIQkqu/GfTtRXRDEyrLnZ6Sy+lg/3cE/O7bdxfEW6LUY514LKCD7g19a/CXx3Z3umWrQXhDGJSwzh42xzx6Zr5W1+HzrHzF5aI5/DvW38MluNRia2s7pYbu2bcmW2nae4Psa+E44ymOOwim5crg737H6HwNUo1MQ8NWdlNW+a2PtTVYtC8SWvk+JdA0zWYWGN8sK78ezda8+8Qfs9/CvWd0mny6r4flboI5PNjB+jf41i+DpviLYlEmk0+a2JGXlk3ZHttr0eDWJQAJYULd9rV+S0+Kc6yiShCuqsfPX/g/ifVZjwxQ57Kz9GeP3n7LOtWzNP4V8fWcjDlVlDwN+amuT1v8AZz+MbX/22aK01W4GP3w1AOxx0+9zX0kNcto2AlUqTzywqxH4itVPyzyL/wACH+NfQYbxPxUUvbYdN90/+B+p8/U4TTd43PmG6+HHx7t2xJ4bu5NvGU8pv5Gs+5+H3xwuVCS+EtSYA5x5KD+tfWw8XxRjAv5R/wACH+NWrjxRNBFE8txcKJASAQM4FdNTxEy+tP2tbCNyfXR/idOHwGa4KkqFCvKMOiTaX3Hxw3wK+MesTrLN4UnQgYBlljQAfnXU+G/2efjTb2r2kWpWujWkrb5EGplQTjGSE6nFfSTeLoZB/wAf0h/4EP8AGoJPEdo/WV2+rD/Gip4mQpx5aGFfzdv8znq8N4jEzc68nJvdvU8Xsv2VpJGEvif4gwlz95beFpG/NjXa+H/gV8JdB2vcWN/4gnTnddzbUJ/3VwK6t9cgfPlxFvXDCqd1rFwyN5EcSPj5d+TzXh4zxHziv7tGEaa+9/18jsw3C1OPxK5u2lxYaJZmHRdN0/RbVRgi2hVOPcjrXkfxo8eWlpod9GbohzC6xIDl3dhgMfQc1V8YN8Q78vtls4bZc/NFIAAPx6V4N8TFlsXhsp7lZrmb95LhiSB2yfeqyXA4jOcbCeNxHO73sne36I+mlluFyvA1MTJrRaJd+hg+GU/eyyH+FNtFWtGiNvYgsMNJ8x+naiv6ApLlikfhVduc2y6CGBUgEHjFY9tc3nhzXI720bBQ7kz0Ze6mtJHou7eK8tzE/HdW9DWVelGrBxkrpmuGrTw9RTi7NHoWifGDTrWNcveWpP3omjDpn25rr9F+JE+uqRp1vOIwObhrUon4Enk/SvnnSb688NautwLe3nwMGOaMOki/j0PuK9L074jQ3luqw2MKSgf6syYx9BivyzPuFaFB81Cg5X682i+Vr/ifsfDGeTzSooYmpBPty6v53t+B1/iW/wBSjsJ7+IxXNyg3YnkKhh6A9j6V5o/xT1JWZG0i3VgcEGRgQfSr+q61d6kwNwwVF5WNeFFcj4rtIniN+vyyAgOMcOP8aWRZZhU/Z4umpX230Pp+JqGPp4V4jA1eVwWqsrNfNbn0P+z1LD4t0y41/UraNHtrryYoVJK5Cg7jn616T4xuApthxjDcV5Z+yY4XwDf/APYRb/0AV3Xj242Nac9d1fnnElCMM8qUKatGL0XyPnMlxFfMFSq4iXNJnk3xg1z/AIRR7K6sbeOYXjOGjZiAm3HTH1rgbf4n6pNMkUWj27sxwB5rVs/tDSmW20fPaSX+QrjfDNnDb2q3R+aWVc5/uj0Ffo+SZdgf7IjXxFPmlquv+ZVfEZtiM6eAw9blgkm9Fovmj2rQb/UoraG4aWOKd1BcQNuT6ZPWl174nf2E3lajFMmfuyi1LI34g4rz/SNevNPHlxFZIs58t+n4elTat8RLW0gZJbGGaYjiLfuH48V4H9iOtidaPOn0Tt/mfY5jSp4fC89Sootfakk7+q0/Ata58X7G6iYxteXjj7qFAkYPvXlplute1ia/vXLs7bpD2Hoo/lRf3F34i1Z7poIIM8bYYwiIvpgVqW8UdrCIoxwO/qa/T8jyHDZdHmpw5ZPfW9vLZH4ZxBxFiMf+5c04J6WVk/O12PkYAYGAKKglbI5or6a58mokaSDirEcmDWarEd6lSSs7mrgaMiQ3MflzIHX37fSsq50KQNvs5Q3cKxwR+NaOmxyXl9DaQlRJM4RdzYGT6mvVNB+GH3W1XUvrHbr/AFNaU8LPEX5EcGKzOll9nUlY8XSbXrM7WSZlHZ13D86dqF1qk+nsLrT3jhYj975TAfmeK+pNH8O+ENBVZJba3Eg6PO29vwBrI+PV/a3PwpvktYmVPNi2sVCjG7sK56uSQg/aOCutRYbxKx1SccJTlLkm+XV9/LUr/sptjwHfD/qIN/6AK7D4jybWsvo39K8+/ZVvU/4RnULA8P8AazID6jaBXdfEsktY/Rv6V/PHEdNriKrfq/0P3nhWDjh6F/63PDPju5a30kdcPJ/IVw9te6vDp8Xk6fIYQuFlMTEH8eldb8a7lXm0+1XloizMc+oHFe5fC7UrGD4WeHob6H90bJQWKBl+8eor9e4TwCxOWQhKN93+J8H4icS4rh3NJYjDby5V20t6PsfLjt4gvRtCzKp9F2D86ktdBKnfeSj1KKc5/Gvp7W/CXhPW1aa3gjRj/HbPtP5dP0rz7XfhhcKXbS9SSQDkJOu0/mK+wp5RKmv3cV8j86lx08yl/tU5J/3rs80XyoYxHEgRR2FQSSc0XZaGZ4nI3IxU4ORkVTeT61FraHqwjzK5K70VWLc80UXNVEjDU4PVYFhTg/rxWdzdxLSSFGDIxVgcgjtXqnh7x1rGr2kNlG4S5jQI/lj55P8AaryQODVzRtUutJ1GK/spNk0ZyO4I7gjuDXZg8W8PUv0e552Y5dDF0rNarY+g9F04W6m+1WYFx8x3tkL9T3rlfjL4jGoeEbmyso/9HDoXkI5bnt6Csmz8UXfi66itExG/a2U8D1b3rT+JNjDp/wANryJPmkLx739Tn+VfR4iVOthpThqrHw1DASw+PpPEaz5lZdEZPwL1F9MsTdKflS7O4eq4Ga9h+JN5CLOzvNwMQiaTPqOK8J+Fj40GYH/n4P8AIV13jXXjP4Z0/TcnzELKxz1XORX82cQ4D2+bua76+lj+y+HsBz5RhK0Vqlr6XZ5l4+uHuZoriQ/M7ux/SvX/AIYeKI7fwhpOmapGEiW3CxyY/hJPUenvXi3jBspaj3b+leveF9Mi1T4eaMoIS5S0Hlv68ng+1fsHBdNeyUeyf5n4b4yQpTxzjUWnu/LQ6LW9NkGbzR5iD94Kjdf901w/inx5q1np0+lvIGuZV2b2GHjHf8aq3HjG98LPNYsBLKMgQOciM+v/ANbvXnep6hc6jey3t5KZZ5W3Ox7mvqswx0KUfZw+L8j85ybI5ylzV0nBbPqxGkJ5J5phb3qEyexpPM9q+ZufbKFtCRjRUJfI6Gii5XKANGfao94pQ2azua2JAaXNR5p2aLisSwTywTLNBI8UiHKOjEEH2Nb2teN9U1HwvNpGoKlwXK7Z+jjB79jXNlqhuctEcVpGvOmmouyZlUwtKrJSnFNrbyO5+G0gXRJgT/y3P8hWl4jlz5PPrXIeCdags1awuMIsj7kkJ4B9DXR60+RHkjAB57V+eZph5xxzm1o9j+jeDcdQq5HCnCV3BWa7anK+LGylsfQt/StiDx3q8Phyy0jTtlnHBCI2mXmR+vIP8PWub8QX0V3KkUI3LET83qarw/LEoPUCvscmnVw1BW0bPxvjZ4XMM0lLSaVvS6RYeR5JGkkdndjksxySfrSE+1MzSbh613OTZ85ypKyHg+lITzTd4o3UXCw7NFMzRRcOUZu5oBoorNGgoOKXcKKKoQhYU1mzRRUsZFLFnLKOfSppdTvprJLJ5maNOnrj0z6UUVnUpQnbmV7HRQxVahzeyk43VnZ7ojij2/MRk1KDRRWpzgTSEgHpRRQAu73pN1FFOwBu+lFFFFgP/9k=" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    html, body { height: 100%; background: #0a0710; overflow: hidden; }
+    #root { height: 100%; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
+    select option { background: #110d1f; color: #F5F0E8; }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div style="display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;height:100vh;background:#0a0710;">
+      <div style="font-size:48px;">✝️</div>
+      <div style="color:#C8A84B;font-family:system-ui;font-size:18px;font-weight:900;letter-spacing:2px;">TRYBNUS BIBLE STUDY</div>
+      <div style="color:#6B5E4A;font-size:12px;font-family:system-ui;">Loading...</div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script>
+  window.onerror = function(msg, src, line) {
+    document.getElementById('root').innerHTML = '<div style="color:#C8A84B;padding:24px;font-family:monospace;font-size:12px;background:#0a0710;min-height:100vh;"><div style="font-size:16px;margin-bottom:16px;">ERROR</div>' + msg + '<br><br>Line: ' + line + '</div>';
+    return true;
+  };
+  window.storage = {
+    get: (k) => { try { const v=localStorage.getItem(k); return Promise.resolve(v?{key:k,value:v}:null); } catch(e){return Promise.resolve(null);} },
+    set: (k,v) => { try { localStorage.setItem(k,v); return Promise.resolve({key:k,value:v}); } catch(e){return Promise.resolve(null);} },
+    delete: (k) => { try { localStorage.removeItem(k); return Promise.resolve({key:k,deleted:true}); } catch(e){return Promise.resolve(null);} }
+  };
+  </script>
+  <script>
+// ── DESIGN TOKENS ─────────────────────────────────────────────────────────────
+const C = {
+    bg: "#0a0710",
+    bgCard: "#110d1f",
+    bgElevated: "#1a1430",
+    borderDim: "#2a1f45",
+    border: "#3d2d6b",
+    purple: "#6B21A8",
+    purpleBright: "#9333EA",
+    purpleGlow: "#6B21A822",
+    gold: "#C8A84B",
+    goldBright: "#E4C56A",
+    goldDim: "#8B7235",
+    white: "#F5F0E8",
+    whiteDim: "#C8BEA8",
+    silver: "#A89880",
+    silverDim: "#6B5E4A",
+    success: "#2ecc71",
+    danger: "#e74c3c",
+};
+// ── BIBLE API ─────────────────────────────────────────────────────────────────
+const API = "https://bible-api.com";
+// Books of the Bible organized by testament
+const OT_BOOKS = [
+    "Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy",
+    "Joshua", "Judges", "Ruth", "1 Samuel", "2 Samuel",
+    "1 Kings", "2 Kings", "1 Chronicles", "2 Chronicles", "Ezra",
+    "Nehemiah", "Esther", "Job", "Psalms", "Proverbs",
+    "Ecclesiastes", "Song of Solomon", "Isaiah", "Jeremiah", "Lamentations",
+    "Ezekiel", "Daniel", "Hosea", "Joel", "Amos",
+    "Obadiah", "Jonah", "Micah", "Nahum", "Habakkuk",
+    "Zephaniah", "Haggai", "Zechariah", "Malachi"
+];
+const NT_BOOKS = [
+    "Matthew", "Mark", "Luke", "John", "Acts",
+    "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians",
+    "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy",
+    "2 Timothy", "Titus", "Philemon", "Hebrews", "James",
+    "1 Peter", "2 Peter", "1 John", "2 John", "3 John",
+    "Jude", "Revelation"
+];
+const APOCRYPHA_BOOKS = [
+    "Tobit", "Judith", "1 Maccabees", "2 Maccabees",
+    "Wisdom of Solomon", "Sirach", "Baruch",
+    "1 Esdras", "2 Esdras", "Prayer of Manasseh",
+    "Additions to Esther", "Susanna", "Bel and the Dragon"
+];
+// Book of Enoch - key chapters embedded
+const ENOCH_TEXT = {
+    1: { title: "The Blessing of Enoch", text: `1. The words of the blessing of Enoch, wherewith he blessed the elect and righteous, who will be living in the day of tribulation, when all the wicked and godless are to be removed.\n\n2. And he took up his parable and said: Enoch a righteous man, whose eyes were opened by God, saw the vision of the Holy One in the heavens, which the angels showed me, and from them I heard everything, and from them I understood as I saw, but not for this generation, but for a remote one which is for to come.\n\n3. Concerning the elect I said, and took up my parable concerning them: The Holy Great One will come forth from His dwelling,\n4. And the eternal God will tread upon the earth, even on Mount Sinai, and appear from His camp and appear in the strength of His might from the heaven of heavens.\n\n5. And all shall be smitten with fear, and the Watchers shall quake, and great fear and trembling shall seize them unto the ends of the earth.\n\n6. And the high mountains shall be shaken, and the high hills shall be made low, and shall melt like wax before the flame.\n\n7. And the earth shall be wholly rent in sunder, and all that is upon the earth shall perish, and there shall be a judgement upon all.\n\n8. But with the righteous He will make peace, and will protect the elect, and mercy shall be upon them. And they shall all belong to God, and they shall be prospered, and they shall all be blessed. And He will help them all, and light shall appear unto them, and He will make peace with them.` },
+    2: { title: "The Watchers", text: `1. And it came to pass when the children of men had multiplied that in those days were born unto them beautiful and comely daughters.\n\n2. And the angels, the children of the heaven, saw and lusted after them, and said to one another: Come, let us choose us wives from among the children of men and beget us children.\n\n3. And Semjaza, who was their leader, said unto them: I fear ye will not indeed agree to do this deed, and I alone shall have to pay the penalty of a great sin.\n\n4. And they all answered him and said: Let us all swear an oath, and all bind ourselves by mutual imprecations not to abandon this plan but to do this thing.\n\n5. Then sware they all together and bound themselves by mutual imprecations upon it.\n\n6. And they were in all two hundred; who descended in the days of Jared on the summit of Mount Hermon, and they called it Mount Hermon, because they had sworn and bound themselves by mutual imprecations upon it.\n\n7. And these are the names of their leaders: Samlazaz, their leader, Araklba, Rameel, Kokablel, Tamlel, Ramlel, Danel, Ezeqeel, Baraqijal, Asael, Armaros, Batarel, Ananel, Zaqiel, Samsapeel, Satarel, Turel, Jomjael, Sariel. These are their chiefs of tens.` },
+    6: { title: "The Giants and Corruption", text: `1. And all the others together with them took unto themselves wives, and each chose for himself one, and they began to go in unto them and to defile themselves with them, and they taught them charms and enchantments, and the cutting of roots, and made them acquainted with plants.\n\n2. And they became pregnant, and they bare great giants, whose height was three thousand ells:\n\n3. Who consumed all the acquisitions of men. And when men could no longer sustain them,\n\n4. The giants turned against them and devoured mankind.\n\n5. And they began to sin against birds, and beasts, and reptiles, and fish, and to devour one anothers flesh, and drink the blood.\n\n6. Then the earth laid accusation against the lawless ones.` },
+    14: { title: "The Heavenly Temple", text: `8. And the visions were shown to me thus: Behold, in the vision clouds invited me and a mist summoned me, and the course of the stars and the lightnings sped and hastened me, and the winds in the vision caused me to fly and lifted me upward, and bore me into heaven.\n\n9. And I went in till I drew nigh to a wall which is built of crystals and surrounded by tongues of fire: and it began to affright me.\n\n10. And I went into the tongues of fire and drew nigh to a large house which was built of crystals: and the walls of the house were like a tesselated floor made of crystals, and its groundwork was of crystal.\n\n11. Its ceiling was like the path of the stars and the lightnings, and between them were fiery cherubim, and their heaven was water.\n\n12. A flaming fire surrounded the walls, and its portals blazed with fire.\n\n13. And I entered into that house, and it was hot as fire and cold as ice: there were no delights of life therein: fear covered me, and trembling got hold upon me.\n\n14. And as I quaked and trembled, I fell upon my face.\n\n15. And I beheld a vision, And lo! there was a second house, greater than the former, and the entire portal stood open before me, and it was built of flames of fire.` },
+};
+// Book of Jasher - key chapters embedded  
+const JASHER_TEXT = {
+    1: { title: "The Creation and Fall", text: `1. And God said, Let us make man in our image, after our likeness, and God created man in his own image.\n\n2. And God formed man from the ground, and he blew into his nostrils the breath of life, and man became a living soul endowed with speech.\n\n3. And the Lord said, It is not good for man to be alone; I will make unto him a helpmeet.\n\n4. And the Lord caused a deep sleep to fall upon Adam, and he slept, and he took away one of his ribs, and he built flesh upon it, and brought it to Adam, and Adam awoke from his sleep, and behold a woman was standing before him.\n\n5. And Adam said, This is bone of my bones and flesh of my flesh; she shall be called woman, for she was taken from man.\n\n6. And Adam and his wife were both naked and they were not ashamed.\n\n7. And the serpent was more subtle than any beast of the field which the Lord God had made, and the serpent seduced the woman, and she took of the fruit of the tree and she gave also to her husband and he ate.\n\n8. And the eyes of both were opened and they knew they were naked, and they sewed fig leaves and made themselves aprons.` },
+    2: { title: "Cain and Abel", text: `1. And it was in the hundred and thirtieth year of the life of Adam upon the earth, that he again knew Eve his wife, and she conceived and bare a son in his likeness and in his image, and she called his name Seth, saying, Because God has appointed me another seed in the place of Abel, for Cain has slain him.\n\n2. And Seth lived one hundred and five years, and he begat a son; and Seth called the name of his son Enosh, saying, Because in that time the sons of men began to multiply, and to afflict their souls and hearts by transgressing and rebelling against God.\n\n3. And it was in the days of Enosh that the sons of men continued to rebel and transgress against God, to increase the anger of the Lord against the sons of men.\n\n4. And the sons of men went and they served other gods, and they forgot the Lord who had created them in the earth: and in those days the sons of men made images of brass and iron, wood and stone, and they bowed down and served them.` },
+    7: { title: "Nimrod and the Tower", text: `1. And Cush the son of Ham, the son of Noah, took a wife in those days in his old age, and she bare a son, and they called his name Nimrod, saying, At that time the sons of men again began to rebel and transgress against God, and the child grew up, and his father loved him exceedingly, for he was the son of his old age.\n\n2. And the garments of skin which God made for Adam and his wife, when they went out of the garden, were given to Cush.\n\n3. For after the death of Adam and his wife, the garments were given to Enoch, the son of Jared, and when Enoch was taken up to God, he gave them to Methuselah, his son.\n\n4. And at the death of Methuselah, Noah his son took them, and brought them to the ark, and they were with him until he went out of the ark.\n\n5. And in their going out, Ham stole those garments from Noah his father, and he took them and hid them from his brothers.\n\n6. And when Ham begat his first born Cush, he gave him the garments in secret, and they came to Nimrod when he was twenty years old.\n\n7. And Nimrod became strong when he put on the garments, and God gave him might and strength, and he was a mighty hunter in the earth.` },
+};
+// Matthew Henry's Commentary (Concise) - key books and chapters
+const COMMENTARY = {
+    "Genesis 1": "The first verse of the Bible gives us a satisfying account of the origin of all things. God is the great cause, the first cause, the creator. In the beginning God created the heaven and the earth. The works of creation display God's eternal power and Godhead. Observe the order: God made the light first, then divided light from darkness. The whole creation was His work alone, and it was very good. Let us adore the Creator, and learn from this chapter that all things are upheld by the same power that made them.",
+    "Genesis 2": "We have here a more particular account of the creation of man, the work of the sixth day. Man was made last of all the creatures, as the chief and crown of God's works. God breathed into him the breath of life, distinguishing him from the beasts. The garden of Eden was a place of delight, where man was placed not in idleness but to dress and keep it. The institution of marriage is here recorded — a divine ordinance, honourable in all.",
+    "Genesis 3": "The fall of man is here described. The serpent, that is, Satan in the serpent, tempted Eve. The temptation began with questioning God's word: Yea, hath God said? Sin entered by the ear, through doubt, then desire, then disobedience. The consequences were immediate — shame, fear, and hiding from God. Yet even in judgement, mercy is shown: the promise of the Seed who would bruise the serpent's head — the first gospel preached.",
+    "Psalms 1": "This psalm shows the holiness and happiness of the godly man, and the sinfulness and misery of the wicked. The blessed man walks not in the counsel of the ungodly. His delight is in the law of the Lord, and he meditates therein day and night. He is like a tree planted by rivers of water — fruitful, stable, flourishing. The ungodly are like the chaff — worthless, unstable, driven away. The two ways, the two ends, are set before us.",
+    "Psalms 23": "The Lord is my shepherd — here is the believer's confidence and comfort. The Lord provides (I shall not want), gives rest (green pastures), refreshment (still waters), restoration (restoreth my soul), and guidance (paths of righteousness). Even in the valley of the shadow of death, the believer fears no evil, for God is present. The psalm ends in full assurance: goodness and mercy follow, and the house of the Lord is the eternal home.",
+    "Proverbs 1": "The design of Proverbs is to give instruction in wisdom. The fear of the Lord is the beginning of knowledge — this is the foundation of all true wisdom. Solomon warns against the enticement of sinners: My son, if sinners entice thee, consent thou not. Wisdom is personified, crying out in the streets, calling men to turn from folly. Those who refuse her call will eat the fruit of their own way.",
+    "Isaiah 53": "This chapter is the very heart of the gospel in the Old Testament — the suffering Messiah foretold seven hundred years before Christ. He is despised and rejected, a man of sorrows. He was wounded for our transgressions, bruised for our iniquities. The chastisement of our peace was upon Him, and with His stripes we are healed. He bore the sin of many. No clearer prophecy of the atoning death of Christ exists anywhere in scripture.",
+    "Matthew 1": "The genealogy of Christ opens the New Testament, proving Jesus to be the son of David and the son of Abraham, as promised. Matthew traces the legal line through Joseph. The chapter records the virgin birth — that which is conceived in her is of the Holy Ghost. His name JESUS means Saviour, for He shall save His people from their sins. He is also Emmanuel, God with us — the great mystery of godliness.",
+    "Matthew 5": "The Sermon on the Mount begins with the Beatitudes — the characters and blessings of the citizens of Christ's kingdom. Blessed are the poor in spirit, they that mourn, the meek, those that hunger after righteousness. These describe the temper of the true Christian. Christ then teaches that His followers are the salt of the earth and the light of the world. He came not to destroy the law but to fulfil it.",
+    "John 1": "The eternal Word is here declared. In the beginning was the Word, and the Word was with God, and the Word was God. The Word is Christ, who is from everlasting, distinct from the Father yet one with Him. All things were made by Him. In Him was life, and the life was the light of men. And the Word was made flesh, and dwelt among us — the great doctrine of the incarnation. The Son declares the Father to us.",
+    "John 3": "The conversation with Nicodemus teaches the necessity of the new birth: Except a man be born again, he cannot see the kingdom of God. This is a spiritual birth, of water and of the Spirit. The chapter contains the gospel in miniature: For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life. Here is love, gift, faith, and life eternal.",
+    "Romans 8": "This is one of the most precious chapters in all scripture. There is therefore now no condemnation to them which are in Christ Jesus. The believer is freed from the law of sin and death, walks after the Spirit, and is led by the Spirit as a son of God. All things work together for good to them that love God. The chapter ends in triumph: nothing — not life, nor death, nor any creature — can separate us from the love of God in Christ.",
+    "Revelation 1": "The Revelation of Jesus Christ, given to John on the isle of Patmos. It is a revelation, an unveiling, of things to come and of the glory of Christ. John sees the glorified Christ in the midst of the seven golden candlesticks — His eyes as a flame of fire, His voice as many waters. Christ declares Himself the first and the last, who was dead and is alive for evermore, holding the keys of hell and death. Blessed is he that readeth this prophecy.",
+    "Revelation 21": "A new heaven and a new earth — the final state of glory. The holy city, new Jerusalem, comes down from God. God shall wipe away all tears; there shall be no more death, neither sorrow nor crying. He that overcometh shall inherit all things. The city is described in its splendour — gates of pearl, streets of gold, the glory of God its light. No temple is there, for the Lord God and the Lamb are the temple of it.",
+};
+// Storage helpers
+async function loadData(key, fb) {
+    try {
+        const r = await window.storage.get(key);
+        return r ? JSON.parse(r.value) : fb;
+    }
+    catch (_a) {
+        return fb;
+    }
+}
+async function saveData(key, val) {
+    try {
+        await window.storage.set(key, JSON.stringify(val));
+    }
+    catch (_a) { }
+}
+// ── UI PRIMITIVES ─────────────────────────────────────────────────────────────
+function Card({ children, style, glow }) {
+    return (React.createElement("div", { style: Object.assign({ background: C.bgCard, borderRadius: 14, border: `1px solid ${glow ? C.gold + "66" : C.borderDim}`, padding: 16, boxShadow: glow ? `0 0 24px ${C.purpleGlow}` : "none" }, style) }, children));
+}
+function Eyebrow({ children, color }) {
+    return React.createElement("div", { style: { fontSize: 10, fontWeight: 800, letterSpacing: 2.5, textTransform: "uppercase", color: color || C.goldDim, marginBottom: 6 } }, children);
+}
+function Btn({ children, onClick, color, outline, style, small, disabled }) {
+    return (React.createElement("button", { onClick: onClick, disabled: disabled, style: Object.assign({ padding: small ? "7px 14px" : "12px 20px", borderRadius: 10, border: outline ? `1px solid ${color || C.gold}` : "none", background: outline ? "transparent" : (color || C.purple), color: outline ? (color || C.gold) : "#fff", fontWeight: 700, fontSize: small ? 12 : 14, cursor: disabled ? "default" : "pointer", opacity: disabled ? 0.5 : 1, transition: "opacity 0.15s" }, style) }, children));
+}
+// ── SCRIPTURE READER ──────────────────────────────────────────────────────────
+function ScriptureReader({ notes, onAddNote, savedVerses, onSaveVerse, fontScale, onFontScale, lastRead, onLastRead }) {
+    const [testament, setTestament] = React.useState("OT");
+    const [book, setBook] = React.useState("Genesis");
+    const [chapter, setChapter] = React.useState(1);
+    const fs = (base) => Math.round(base * (fontScale || 1));
+    const [copiedRef, setCopiedRef] = React.useState(null);
+    const [verses, setVerses] = React.useState([]);
+    const [loading, setLoading] = React.useState(false);
+    const [error, setError] = React.useState("");
+    const [noteVerse, setNoteVerse] = React.useState(null);
+    const [noteText, setNoteText] = React.useState("");
+    const [totalChapters, setTotalChapters] = React.useState(50);
+    const [source, setSource] = React.useState("KJV");
+    const books = testament === "OT" ? OT_BOOKS : testament === "NT" ? NT_BOOKS : testament === "APO" ? APOCRYPHA_BOOKS : [];
+    React.useEffect(() => {
+        if (source === "KJV" || source === "APO") {
+            fetchChapter();
+        }
+        else if (source === "ENOCH") {
+            loadEnoch();
+        }
+        else if (source === "JASHER") {
+            loadJasher();
+        }
+    }, [book, chapter, source]);
+    const fetchChapter = async () => {
+        var _a;
+        setLoading(true);
+        setError("");
+        try {
+            const ref = encodeURIComponent(`${book} ${chapter}`);
+            const res = await fetch(`${API}/${ref}?translation=kjv`);
+            const data = await res.json();
+            if (data.verses) {
+                setVerses(data.verses);
+                setTotalChapters(((_a = data.verses[0]) === null || _a === void 0 ? void 0 : _a.book_name) ? 150 : 50);
+                if (onLastRead)
+                    onLastRead({ source: "KJV", testament, book, chapter });
+            }
+            else {
+                setError("Chapter not found. Try another.");
+                setVerses([]);
+            }
+        }
+        catch (_b) {
+            setError("No connection. Check internet and try again.");
+            setVerses([]);
+        }
+        setLoading(false);
+    };
+    const loadEnoch = () => {
+        const ch = ENOCH_TEXT[chapter];
+        if (ch) {
+            const lines = ch.text.split("\n\n").map((t, i) => ({
+                verse: i + 1,
+                text: t.replace(/^\d+\.\s*/, ""),
+                book_name: "1 Enoch",
+                chapter,
+            }));
+            setVerses(lines);
+            setError("");
+        }
+        else {
+            setError("Chapter not available in embedded text. Key chapters: 1, 2, 6, 14.");
+            setVerses([]);
+        }
+        setLoading(false);
+    };
+    const loadJasher = () => {
+        const ch = JASHER_TEXT[chapter];
+        if (ch) {
+            const lines = ch.text.split("\n\n").map((t, i) => ({
+                verse: i + 1,
+                text: t.replace(/^\d+\.\s*/, ""),
+                book_name: "Book of Jasher",
+                chapter,
+            }));
+            setVerses(lines);
+            setError("");
+        }
+        else {
+            setError("Chapter not available. Key chapters: 1, 2, 7.");
+            setVerses([]);
+        }
+        setLoading(false);
+    };
+    const handleNoteSubmit = () => {
+        if (!noteText.trim() || !noteVerse)
+            return;
+        const ref = `${book} ${chapter}:${noteVerse.verse}`;
+        onAddNote(ref, noteText, noteVerse.text);
+        setNoteVerse(null);
+        setNoteText("");
+    };
+    const isSaved = (v) => savedVerses.some((s) => s.ref === `${book} ${chapter}:${v.verse}`);
+    const hasNote = (v) => notes[`${book} ${chapter}:${v.verse}`];
+    return (React.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 12 } },
+        lastRead && lastRead.book && !(lastRead.book === book && lastRead.chapter === chapter && lastRead.source === source) && (React.createElement("button", { onClick: () => { setSource(lastRead.source || "KJV"); if (lastRead.testament)
+                setTestament(lastRead.testament); if (lastRead.book)
+                setBook(lastRead.book); setChapter(lastRead.chapter || 1); }, style: { background: C.purple + "22", border: `1px solid ${C.purple}`, borderRadius: 10, color: C.purpleBright, padding: "10px 14px", fontSize: 13, cursor: "pointer", textAlign: "left", fontFamily: "system-ui" } },
+            "\u21A9\uFE0F Jump back to ",
+            lastRead.book,
+            " ",
+            lastRead.chapter)),
+        React.createElement(Card, null,
+            React.createElement("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "center" } },
+                React.createElement(Eyebrow, null, "Text Size"),
+                React.createElement("div", { style: { display: "flex", gap: 6, alignItems: "center" } },
+                    React.createElement("button", { onClick: () => onFontScale && onFontScale(Math.max(0.8, Math.round(((fontScale || 1) - 0.1) * 10) / 10)), style: { background: C.bgElevated, border: `1px solid ${C.border}`, borderRadius: 6, color: C.gold, width: 32, height: 32, fontSize: 16, cursor: "pointer", fontWeight: 700 } }, "A\u2212"),
+                    React.createElement("span", { style: { color: C.silverDim, fontSize: 11, minWidth: 36, textAlign: "center", fontFamily: "system-ui" } },
+                        Math.round((fontScale || 1) * 100),
+                        "%"),
+                    React.createElement("button", { onClick: () => onFontScale && onFontScale(Math.min(1.6, Math.round(((fontScale || 1) + 0.1) * 10) / 10)), style: { background: C.bgElevated, border: `1px solid ${C.border}`, borderRadius: 6, color: C.gold, width: 32, height: 32, fontSize: 18, cursor: "pointer", fontWeight: 700 } }, "A+")))),
+        React.createElement(Card, null,
+            React.createElement(Eyebrow, null, "Text Source"),
+            React.createElement("div", { style: { display: "flex", gap: 6, flexWrap: "wrap" } }, [
+                { id: "KJV", label: "KJV Bible" },
+                { id: "ENOCH", label: "1 Enoch" },
+                { id: "JASHER", label: "Jasher" },
+            ].map(s => (React.createElement("button", { key: s.id, onClick: () => { setSource(s.id); setChapter(1); if (s.id === "KJV") {
+                    setTestament("OT");
+                    setBook("Genesis");
+                } }, style: {
+                    padding: "8px 14px", borderRadius: 8, border: `1px solid ${source === s.id ? C.gold : C.borderDim}`,
+                    background: source === s.id ? C.gold + "22" : C.bgElevated,
+                    color: source === s.id ? C.goldBright : C.whiteDim,
+                    fontWeight: source === s.id ? 700 : 400, fontSize: 12, cursor: "pointer",
+                } }, s.label))))),
+        source === "KJV" && (React.createElement(Card, null,
+            React.createElement(Eyebrow, null, "Testament"),
+            React.createElement("div", { style: { display: "flex", gap: 6, marginBottom: 12 } }, [{ id: "OT", label: "Old Testament" }, { id: "NT", label: "New Testament" }].map(t => (React.createElement("button", { key: t.id, onClick: () => { setTestament(t.id); setBook(t.id === "OT" ? "Genesis" : "Matthew"); setChapter(1); }, style: {
+                    flex: 1, padding: "8px", borderRadius: 8, border: "none",
+                    background: testament === t.id ? C.purple : C.bgElevated,
+                    color: testament === t.id ? "#fff" : C.whiteDim,
+                    fontWeight: testament === t.id ? 700 : 400, fontSize: 13, cursor: "pointer",
+                } }, t.label)))),
+            React.createElement(Eyebrow, null, "Book"),
+            React.createElement("select", { value: book, onChange: (e) => { setBook(e.target.value); setChapter(1); }, style: {
+                    width: "100%", background: C.bgElevated, border: `1px solid ${C.border}`,
+                    borderRadius: 8, color: C.white, padding: "10px 12px", fontSize: 14, outline: "none",
+                } }, books.map((b) => React.createElement("option", { key: b, value: b }, b))))),
+        React.createElement(Card, null,
+            React.createElement("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "center" } },
+                React.createElement("button", { onClick: () => setChapter(Math.max(1, chapter - 1)), style: { background: C.bgElevated, border: `1px solid ${C.border}`, borderRadius: 8, color: C.gold, padding: "8px 16px", fontSize: 18, cursor: "pointer", fontWeight: 700 } }, "\u2039"),
+                React.createElement("div", { style: { textAlign: "center" } },
+                    React.createElement("div", { style: { color: C.goldBright, fontWeight: 800, fontSize: 16 } }, source === "ENOCH" ? "1 Enoch" : source === "JASHER" ? "Book of Jasher" : book),
+                    React.createElement("div", { style: { color: C.silverDim, fontSize: 12 } },
+                        "Chapter ",
+                        chapter)),
+                React.createElement("button", { onClick: () => setChapter(chapter + 1), style: { background: C.bgElevated, border: `1px solid ${C.border}`, borderRadius: 8, color: C.gold, padding: "8px 16px", fontSize: 18, cursor: "pointer", fontWeight: 700 } }, "\u203A"))),
+        source === "KJV" && COMMENTARY[`${book} ${chapter}`] && (React.createElement(Card, { style: { border: `1px solid ${C.purple}55`, background: C.bgElevated } },
+            React.createElement(Eyebrow, { color: C.purpleBright }, "Matthew Henry Commentary"),
+            React.createElement("div", { style: { color: C.whiteDim, fontSize: 13, lineHeight: 1.7, fontFamily: "Georgia, serif", fontStyle: "italic" } }, COMMENTARY[`${book} ${chapter}`]))),
+        loading && React.createElement(Card, null,
+            React.createElement("div", { style: { textAlign: "center", color: C.silverDim, padding: 20 } }, "Loading scripture...")),
+        error && React.createElement(Card, null,
+            React.createElement("div", { style: { color: C.danger, textAlign: "center", fontSize: 13 } }, error)),
+        verses.map((v, i) => {
+            const ref = `${book} ${chapter}:${v.verse}`;
+            const saved = isSaved(v);
+            const savedObj = savedVerses.find((s) => s.ref === ref);
+            const noted = hasNote(v);
+            const hl = savedObj && savedObj.color ? savedObj.color : null;
+            return (React.createElement("div", { key: i, style: { padding: "12px 0", borderBottom: `1px solid ${C.borderDim}`, borderLeft: hl ? `3px solid ${hl}` : "3px solid transparent", paddingLeft: hl ? 10 : 0, transition: "all 0.2s" } },
+                React.createElement("div", { style: { display: "flex", gap: 10, alignItems: "flex-start" } },
+                    React.createElement("div", { style: { color: C.gold, fontWeight: 800, fontSize: fs(12), minWidth: 24, paddingTop: 2 } }, v.verse),
+                    React.createElement("div", { style: { flex: 1 } },
+                        React.createElement("div", { style: { color: C.white, fontSize: fs(15), lineHeight: 1.7, fontFamily: "Georgia, serif" } }, v.text),
+                        noted && React.createElement("div", { style: { color: C.goldDim, fontSize: fs(11), marginTop: 6, fontStyle: "italic" } },
+                            "\uD83D\uDCDD ",
+                            notes[ref].note),
+                        React.createElement("div", { style: { display: "flex", gap: 8, marginTop: 8, flexWrap: "wrap" } },
+                            React.createElement("button", { onClick: () => { var _a; setNoteVerse(v); setNoteText(((_a = notes[ref]) === null || _a === void 0 ? void 0 : _a.note) || ""); }, style: { background: "transparent", border: `1px solid ${C.borderDim}`, borderRadius: 6, color: noted ? C.gold : C.silverDim, fontSize: 11, padding: "4px 10px", cursor: "pointer" } }, noted ? "✏️ Edit Note" : "📝 Note"),
+                            React.createElement("button", { onClick: () => onSaveVerse({ ref, text: v.text, book, chapter: chapter, verse: v.verse, color: savedObj ? savedObj.color : null }), style: { background: "transparent", border: `1px solid ${C.borderDim}`, borderRadius: 6, color: saved ? C.goldBright : C.silverDim, fontSize: 11, padding: "4px 10px", cursor: "pointer" } }, saved ? "🔖 Saved" : "🔖 Save"),
+                            React.createElement("button", { onClick: () => { navigator.clipboard && navigator.clipboard.writeText('"' + v.text + '" — ' + ref + " (KJV)"); setCopiedRef(ref); setTimeout(() => setCopiedRef(null), 1500); }, style: { background: "transparent", border: `1px solid ${C.borderDim}`, borderRadius: 6, color: copiedRef === ref ? C.success : C.silverDim, fontSize: 11, padding: "4px 10px", cursor: "pointer" } }, copiedRef === ref ? "✓ Copied" : "📋 Copy")),
+                        saved && (React.createElement("div", { style: { display: "flex", gap: 6, marginTop: 8, alignItems: "center" } },
+                            React.createElement("span", { style: { color: C.silverDim, fontSize: 10, fontFamily: "system-ui" } }, "Tag:"),
+                            [
+                                { c: "#9333EA", label: "Prophecy" },
+                                { c: "#C8A84B", label: "Promise" },
+                                { c: "#e74c3c", label: "Conviction" },
+                                { c: "#2ecc71", label: "Wisdom" },
+                                { c: "#4a90b8", label: "Comfort" },
+                            ].map(tag => (React.createElement("button", { key: tag.c, onClick: () => onSaveVerse({ ref, text: v.text, book, chapter, verse: v.verse, color: tag.c, setColor: true }), title: tag.label, style: { width: 18, height: 18, borderRadius: 9, background: tag.c, border: hl === tag.c ? `2px solid ${C.white}` : "2px solid transparent", cursor: "pointer", padding: 0 } })))))))));
+        }),
+        noteVerse && (React.createElement("div", { style: { position: "fixed", inset: 0, background: "rgba(0,0,0,0.8)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 200, padding: 20 } },
+            React.createElement("div", { style: { background: C.bgCard, border: `1px solid ${C.gold}`, borderRadius: 14, padding: 24, width: "100%", maxWidth: 380 } },
+                React.createElement(Eyebrow, { color: C.gold }, "Study Note"),
+                React.createElement("div", { style: { color: C.whiteDim, fontSize: 12, marginBottom: 12, fontStyle: "italic", fontFamily: "Georgia, serif", lineHeight: 1.5 } },
+                    "\"",
+                    noteVerse.text.substring(0, 100),
+                    "...\""),
+                React.createElement("textarea", { value: noteText, onChange: (e) => setNoteText(e.target.value), placeholder: "Write your observation, revelation, or question...", rows: 5, style: { width: "100%", background: C.bg, border: `1px solid ${C.border}`, borderRadius: 8, color: C.white, padding: "10px 12px", fontSize: 13, outline: "none", resize: "none", fontFamily: "Georgia, serif", lineHeight: 1.6, boxSizing: "border-box" } }),
+                React.createElement("div", { style: { display: "flex", gap: 10, marginTop: 14 } },
+                    React.createElement(Btn, { onClick: () => { setNoteVerse(null); setNoteText(""); }, outline: true, small: true, style: { flex: 1 } }, "Cancel"),
+                    React.createElement(Btn, { onClick: handleNoteSubmit, small: true, style: { flex: 1, background: C.purple } }, "Save Note")))))));
+}
+// ── SEARCH ────────────────────────────────────────────────────────────────────
+function Search({ notes, savedVerses, fontScale }) {
+    const [query, setQuery] = React.useState("");
+    const [results, setResults] = React.useState([]);
+    const [searching, setSearching] = React.useState(false);
+    const [error, setError] = React.useState("");
+    const handleSearch = async () => {
+        if (!query.trim())
+            return;
+        setSearching(true);
+        setError("");
+        setResults([]);
+        try {
+            const res = await fetch(`${API}/${encodeURIComponent(query)}?translation=kjv`);
+            const data = await res.json();
+            if (data.verses && data.verses.length > 0) {
+                setResults(data.verses);
+            }
+            else if (data.text) {
+                setResults([{ verse: 1, text: data.text, book_name: data.reference, chapter: 1 }]);
+            }
+            else {
+                setError("No results found. Try a different reference or phrase.");
+            }
+        }
+        catch (_a) {
+            setError("Search requires internet connection.");
+        }
+        setSearching(false);
+    };
+    // Also search local notes
+    const noteResults = query.length > 2 ? Object.entries(notes).filter(([ref, n]) => ref.toLowerCase().includes(query.toLowerCase()) ||
+        n.note.toLowerCase().includes(query.toLowerCase()) ||
+        n.verseText.toLowerCase().includes(query.toLowerCase())) : [];
+    const savedResults = query.length > 2 ? savedVerses.filter((s) => s.ref.toLowerCase().includes(query.toLowerCase()) ||
+        s.text.toLowerCase().includes(query.toLowerCase())) : [];
+    return (React.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 12 } },
+        React.createElement(Card, { glow: true },
+            React.createElement(Eyebrow, { color: C.gold }, "Search Scripture"),
+            React.createElement("div", { style: { display: "flex", gap: 8 } },
+                React.createElement("input", { value: query, onChange: (e) => setQuery(e.target.value), onKeyDown: (e) => e.key === "Enter" && handleSearch(), placeholder: "Verse reference or keyword...", style: { flex: 1, background: C.bg, border: `1px solid ${C.border}`, borderRadius: 8, color: C.white, padding: "11px 14px", fontSize: 14, outline: "none", fontFamily: "Georgia, serif" } }),
+                React.createElement(Btn, { onClick: handleSearch, disabled: searching, style: { background: C.purple } }, "Go")),
+            React.createElement("div", { style: { color: C.silverDim, fontSize: 11, marginTop: 8 } }, "Try: \"John 3:16\" \u00B7 \"Genesis 1\" \u00B7 \"faith\" \u00B7 \"Ephesians 6\"")),
+        searching && React.createElement(Card, null,
+            React.createElement("div", { style: { textAlign: "center", color: C.silverDim } }, "Searching...")),
+        error && React.createElement(Card, null,
+            React.createElement("div", { style: { color: C.danger, fontSize: 13 } }, error)),
+        results.length > 0 && (React.createElement(Card, null,
+            React.createElement(Eyebrow, { color: C.purpleBright },
+                "Scripture Results (",
+                results.length,
+                ")"),
+            results.map((v, i) => (React.createElement("div", { key: i, style: { padding: "10px 0", borderBottom: `1px solid ${C.borderDim}` } },
+                React.createElement("div", { style: { color: C.gold, fontSize: 11, fontWeight: 700, marginBottom: 4 } },
+                    v.book_name,
+                    " ",
+                    v.chapter,
+                    ":",
+                    v.verse),
+                React.createElement("div", { style: { color: C.white, fontSize: 14, lineHeight: 1.6, fontFamily: "Georgia, serif" } }, v.text)))))),
+        noteResults.length > 0 && (React.createElement(Card, null,
+            React.createElement(Eyebrow, { color: C.gold },
+                "In Your Notes (",
+                noteResults.length,
+                ")"),
+            noteResults.map(([ref, n]) => (React.createElement("div", { key: ref, style: { padding: "10px 0", borderBottom: `1px solid ${C.borderDim}` } },
+                React.createElement("div", { style: { color: C.gold, fontSize: 11, fontWeight: 700, marginBottom: 4 } }, ref),
+                React.createElement("div", { style: { color: C.whiteDim, fontSize: 13, fontStyle: "italic", fontFamily: "Georgia, serif", marginBottom: 4 } },
+                    "\"",
+                    n.verseText.substring(0, 80),
+                    "...\""),
+                React.createElement("div", { style: { color: C.white, fontSize: 13 } },
+                    "\uD83D\uDCDD ",
+                    n.note)))))),
+        savedResults.length > 0 && (React.createElement(Card, null,
+            React.createElement(Eyebrow, { color: C.goldBright },
+                "In Saved Verses (",
+                savedResults.length,
+                ")"),
+            savedResults.map((s) => (React.createElement("div", { key: s.ref, style: { padding: "10px 0", borderBottom: `1px solid ${C.borderDim}` } },
+                React.createElement("div", { style: { color: C.gold, fontSize: 11, fontWeight: 700, marginBottom: 4 } },
+                    "\uD83D\uDD16 ",
+                    s.ref),
+                React.createElement("div", { style: { color: C.white, fontSize: 14, lineHeight: 1.6, fontFamily: "Georgia, serif" } }, s.text))))))));
+}
+// ── NOTES & JOURNAL ───────────────────────────────────────────────────────────
+function NotesView({ notes, journal, fontScale, onAddJournal, onUpdateJournal, onDeleteNote, onDeleteJournal, onUpdateNote }) {
+    const [tab, setTab] = React.useState("journal");
+    const [topic, setTopic] = React.useState("");
+    const [ref, setRef] = React.useState("");
+    const [entry, setEntry] = React.useState("");
+    const [saving, setSaving] = React.useState(false);
+    const [editingId, setEditingId] = React.useState(null);
+    const [editTopic, setEditTopic] = React.useState("");
+    const [editRef, setEditRef] = React.useState("");
+    const [editEntry, setEditEntry] = React.useState("");
+    const [editNoteRef, setEditNoteRef] = React.useState(null);
+    const [editNoteText, setEditNoteText] = React.useState("");
+    const handleSaveJournal = () => {
+        if (!entry.trim())
+            return;
+        setSaving(true);
+        onAddJournal({ topic, ref, entry, date: new Date().toLocaleDateString(), timestamp: Date.now() });
+        setTopic("");
+        setRef("");
+        setEntry("");
+        setTimeout(() => setSaving(false), 1000);
+    };
+    const startEdit = (j) => {
+        setEditingId(j.timestamp);
+        setEditTopic(j.topic || "");
+        setEditRef(j.ref || "");
+        setEditEntry(j.entry || "");
+    };
+    const saveEdit = () => {
+        onUpdateJournal(editingId, { topic: editTopic, ref: editRef, entry: editEntry });
+        setEditingId(null);
+    };
+    const fs = (base) => Math.round(base * fontScale);
+    const noteList = Object.entries(notes);
+    const sorted = [...journal].sort((a, b) => b.timestamp - a.timestamp);
+    return (React.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 12 } },
+        React.createElement("div", { style: { display: "flex", gap: 0, borderBottom: `1px solid ${C.borderDim}` } }, [{ id: "journal", label: "Study Journal" }, { id: "verse", label: "Verse Notes" }].map(t => (React.createElement("button", { key: t.id, onClick: () => setTab(t.id), style: { flex: 1, padding: "12px", background: "transparent", border: "none", borderBottom: `2px solid ${tab === t.id ? C.gold : "transparent"}`, color: tab === t.id ? C.goldBright : C.silverDim, fontWeight: tab === t.id ? 700 : 400, fontSize: 13, cursor: "pointer" } }, t.label)))),
+        tab === "journal" && (React.createElement(React.Fragment, null,
+            React.createElement(Card, { glow: true },
+                React.createElement(Eyebrow, { color: C.gold }, "New Entry"),
+                React.createElement("input", { value: topic, onChange: (e) => setTopic(e.target.value), placeholder: "Topic or title...", style: { width: "100%", background: C.bg, border: `1px solid ${C.border}`, borderRadius: 8, color: C.white, padding: "10px 12px", fontSize: 14, outline: "none", marginBottom: 8, boxSizing: "border-box" } }),
+                React.createElement("input", { value: ref, onChange: (e) => setRef(e.target.value), placeholder: "Scripture reference (e.g. Romans 8:28)...", style: { width: "100%", background: C.bg, border: `1px solid ${C.border}`, borderRadius: 8, color: C.white, padding: "10px 12px", fontSize: 14, outline: "none", marginBottom: 8, boxSizing: "border-box" } }),
+                React.createElement("textarea", { value: entry, onChange: (e) => setEntry(e.target.value), placeholder: "Write your study notes, observations, revelations...", rows: 6, style: { width: "100%", background: C.bg, border: `1px solid ${C.border}`, borderRadius: 8, color: C.white, padding: "10px 12px", fontSize: 14, outline: "none", resize: "none", fontFamily: "Georgia, serif", lineHeight: 1.6, boxSizing: "border-box" } }),
+                React.createElement(Btn, { onClick: handleSaveJournal, style: { width: "100%", marginTop: 10, background: saving ? C.success : C.purple } }, saving ? "✓ Saved" : "Save Entry")),
+            sorted.length === 0 ? (React.createElement(Card, null,
+                React.createElement("div", { style: { textAlign: "center", padding: "24px 0", color: C.silverDim } }, "No journal entries yet. Start studying."))) : sorted.map((j, i) => (React.createElement(Card, { key: j.timestamp }, editingId === j.timestamp ? (React.createElement(React.Fragment, null,
+                React.createElement(Eyebrow, { color: C.gold }, "Editing Entry"),
+                React.createElement("input", { value: editTopic, onChange: (e) => setEditTopic(e.target.value), placeholder: "Topic or title...", style: { width: "100%", background: C.bg, border: `1px solid ${C.border}`, borderRadius: 8, color: C.white, padding: "10px 12px", fontSize: 14, outline: "none", marginBottom: 8, boxSizing: "border-box" } }),
+                React.createElement("input", { value: editRef, onChange: (e) => setEditRef(e.target.value), placeholder: "Scripture reference...", style: { width: "100%", background: C.bg, border: `1px solid ${C.border}`, borderRadius: 8, color: C.white, padding: "10px 12px", fontSize: 14, outline: "none", marginBottom: 8, boxSizing: "border-box" } }),
+                React.createElement("textarea", { value: editEntry, onChange: (e) => setEditEntry(e.target.value), rows: 6, style: { width: "100%", background: C.bg, border: `1px solid ${C.border}`, borderRadius: 8, color: C.white, padding: "10px 12px", fontSize: fs(14), outline: "none", resize: "none", fontFamily: "Georgia, serif", lineHeight: 1.6, boxSizing: "border-box" } }),
+                React.createElement("div", { style: { display: "flex", gap: 8, marginTop: 10 } },
+                    React.createElement(Btn, { onClick: () => setEditingId(null), outline: true, small: true, style: { flex: 1 } }, "Cancel"),
+                    React.createElement(Btn, { onClick: saveEdit, small: true, style: { flex: 1, background: C.purple } }, "Save Changes")))) : (React.createElement(React.Fragment, null,
+                React.createElement("div", { style: { display: "flex", justifyContent: "space-between", marginBottom: 8 } },
+                    React.createElement("div", { style: { flex: 1 } },
+                        j.topic && React.createElement("div", { style: { color: C.goldBright, fontWeight: 700, fontSize: fs(14) } }, j.topic),
+                        j.ref && React.createElement("div", { style: { color: C.purpleBright, fontSize: 11, marginTop: 2 } }, j.ref),
+                        React.createElement("div", { style: { color: C.silverDim, fontSize: 10, marginTop: 2 } },
+                            j.date,
+                            j.edited ? " · edited" : "")),
+                    React.createElement("div", { style: { display: "flex", gap: 4 } },
+                        React.createElement("button", { onClick: () => startEdit(j), style: { background: "transparent", border: `1px solid ${C.borderDim}`, borderRadius: 6, color: C.gold, fontSize: 11, padding: "4px 10px", cursor: "pointer" } }, "\u270F\uFE0F Edit"),
+                        React.createElement("button", { onClick: () => onDeleteJournal(j.timestamp), style: { background: "transparent", border: "none", color: C.silverDim, fontSize: 18, cursor: "pointer" } }, "\u00D7"))),
+                React.createElement("div", { style: { color: C.white, fontSize: fs(13), lineHeight: 1.7, fontFamily: "Georgia, serif", whiteSpace: "pre-wrap" } }, j.entry),
+                React.createElement("button", { onClick: () => { const txt = (j.topic ? j.topic + "\\n" : "") + (j.ref ? j.ref + "\\n" : "") + j.entry; navigator.clipboard && navigator.clipboard.writeText(txt); }, style: { marginTop: 10, background: "transparent", border: `1px solid ${C.borderDim}`, borderRadius: 6, color: C.silver, fontSize: 11, padding: "4px 10px", cursor: "pointer" } }, "\uD83D\uDCCB Copy")))))))),
+        tab === "verse" && (React.createElement(React.Fragment, null, noteList.length === 0 ? (React.createElement(Card, null,
+            React.createElement("div", { style: { textAlign: "center", padding: "24px 0", color: C.silverDim } }, "No verse notes yet. Tap \"Note\" on any verse while reading."))) : noteList.map(([ref, n]) => (React.createElement(Card, { key: ref }, editNoteRef === ref ? (React.createElement(React.Fragment, null,
+            React.createElement("div", { style: { color: C.gold, fontWeight: 700, fontSize: 13, marginBottom: 8 } }, ref),
+            React.createElement("textarea", { value: editNoteText, onChange: (e) => setEditNoteText(e.target.value), rows: 5, style: { width: "100%", background: C.bg, border: `1px solid ${C.border}`, borderRadius: 8, color: C.white, padding: "10px 12px", fontSize: fs(13), outline: "none", resize: "none", fontFamily: "Georgia, serif", lineHeight: 1.6, boxSizing: "border-box" } }),
+            React.createElement("div", { style: { display: "flex", gap: 8, marginTop: 10 } },
+                React.createElement(Btn, { onClick: () => setEditNoteRef(null), outline: true, small: true, style: { flex: 1 } }, "Cancel"),
+                React.createElement(Btn, { onClick: () => { onUpdateNote(ref, editNoteText); setEditNoteRef(null); }, small: true, style: { flex: 1, background: C.purple } }, "Save")))) : (React.createElement(React.Fragment, null,
+            React.createElement("div", { style: { display: "flex", justifyContent: "space-between", marginBottom: 8 } },
+                React.createElement("div", { style: { color: C.gold, fontWeight: 700, fontSize: 13 } }, ref),
+                React.createElement("div", { style: { display: "flex", gap: 4 } },
+                    React.createElement("button", { onClick: () => { setEditNoteRef(ref); setEditNoteText(n.note); }, style: { background: "transparent", border: `1px solid ${C.borderDim}`, borderRadius: 6, color: C.gold, fontSize: 11, padding: "4px 10px", cursor: "pointer" } }, "\u270F\uFE0F Edit"),
+                    React.createElement("button", { onClick: () => onDeleteNote(ref), style: { background: "transparent", border: "none", color: C.silverDim, fontSize: 18, cursor: "pointer" } }, "\u00D7"))),
+            React.createElement("div", { style: { color: C.whiteDim, fontSize: fs(12), fontStyle: "italic", fontFamily: "Georgia, serif", lineHeight: 1.5, marginBottom: 8 } },
+                "\"",
+                n.verseText.substring(0, 120),
+                "...\""),
+            React.createElement("div", { style: { color: C.white, fontSize: fs(13), lineHeight: 1.6, whiteSpace: "pre-wrap" } },
+                "\uD83D\uDCDD ",
+                n.note),
+            React.createElement("button", { onClick: () => { navigator.clipboard && navigator.clipboard.writeText(ref + "\\n" + n.verseText + "\\n\\nNote: " + n.note); }, style: { marginTop: 10, background: "transparent", border: `1px solid ${C.borderDim}`, borderRadius: 6, color: C.silver, fontSize: 11, padding: "4px 10px", cursor: "pointer" } }, "\uD83D\uDCCB Copy"))))))))));
+}
+// ── SAVED VERSES ──────────────────────────────────────────────────────────────
+function SavedView({ savedVerses, onDelete, fontScale }) {
+    const [filter, setFilter] = React.useState("");
+    const [tagFilter, setTagFilter] = React.useState(null);
+    const fs = (base) => Math.round(base * (fontScale || 1));
+    const TAGS = [
+        { c: "#9333EA", label: "Prophecy" },
+        { c: "#C8A84B", label: "Promise" },
+        { c: "#e74c3c", label: "Conviction" },
+        { c: "#2ecc71", label: "Wisdom" },
+        { c: "#4a90b8", label: "Comfort" },
+    ];
+    let filtered = filter ? savedVerses.filter((s) => s.ref.toLowerCase().includes(filter.toLowerCase()) ||
+        s.text.toLowerCase().includes(filter.toLowerCase())) : savedVerses;
+    if (tagFilter)
+        filtered = filtered.filter((s) => s.color === tagFilter);
+    const labelFor = (c) => { const t = TAGS.find(x => x.c === c); return t ? t.label : ""; };
+    return (React.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 12 } },
+        React.createElement(Card, null,
+            React.createElement(Eyebrow, { color: C.gold },
+                "Saved Verses (",
+                savedVerses.length,
+                ")"),
+            React.createElement("input", { value: filter, onChange: (e) => setFilter(e.target.value), placeholder: "Filter saved verses...", style: { width: "100%", background: C.bg, border: `1px solid ${C.border}`, borderRadius: 8, color: C.white, padding: "10px 12px", fontSize: 14, outline: "none", boxSizing: "border-box", marginBottom: 10 } }),
+            React.createElement("div", { style: { display: "flex", gap: 6, flexWrap: "wrap" } },
+                React.createElement("button", { onClick: () => setTagFilter(null), style: { padding: "5px 10px", borderRadius: 14, border: `1px solid ${!tagFilter ? C.gold : C.borderDim}`, background: !tagFilter ? C.gold + "22" : "transparent", color: !tagFilter ? C.goldBright : C.silverDim, fontSize: 11, cursor: "pointer", fontFamily: "system-ui" } }, "All"),
+                TAGS.map(tag => (React.createElement("button", { key: tag.c, onClick: () => setTagFilter(tagFilter === tag.c ? null : tag.c), style: { padding: "5px 10px", borderRadius: 14, border: `1px solid ${tagFilter === tag.c ? tag.c : C.borderDim}`, background: tagFilter === tag.c ? tag.c + "33" : "transparent", color: tagFilter === tag.c ? C.white : C.silverDim, fontSize: 11, cursor: "pointer", display: "flex", alignItems: "center", gap: 5, fontFamily: "system-ui" } },
+                    React.createElement("span", { style: { width: 10, height: 10, borderRadius: 5, background: tag.c, display: "inline-block" } }),
+                    tag.label))))),
+        filtered.length === 0 ? (React.createElement(Card, null,
+            React.createElement("div", { style: { textAlign: "center", padding: "24px 0", color: C.silverDim } }, savedVerses.length === 0 ? "No saved verses yet. Tap 🔖 on any verse while reading." : "No matches."))) : filtered.map((s, i) => (React.createElement(Card, { key: i, style: { borderLeft: s.color ? `3px solid ${s.color}` : `1px solid ${C.borderDim}` } },
+            React.createElement("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start" } },
+                React.createElement("div", { style: { display: "flex", alignItems: "center", gap: 8, marginBottom: 8 } },
+                    React.createElement("div", { style: { color: C.gold, fontWeight: 700, fontSize: 12 } },
+                        "\uD83D\uDD16 ",
+                        s.ref),
+                    s.color && React.createElement("span", { style: { fontSize: 9, color: s.color, border: `1px solid ${s.color}`, borderRadius: 8, padding: "1px 7px", fontFamily: "system-ui", textTransform: "uppercase", letterSpacing: 0.5 } }, labelFor(s.color))),
+                React.createElement("div", { style: { display: "flex", gap: 4 } },
+                    React.createElement("button", { onClick: () => { navigator.clipboard && navigator.clipboard.writeText('"' + s.text + '" — ' + s.ref + " (KJV)"); }, style: { background: "transparent", border: "none", color: C.silverDim, fontSize: 14, cursor: "pointer" } }, "\uD83D\uDCCB"),
+                    React.createElement("button", { onClick: () => onDelete(s.ref), style: { background: "transparent", border: "none", color: C.silverDim, fontSize: 18, cursor: "pointer" } }, "\u00D7"))),
+            React.createElement("div", { style: { color: C.white, fontSize: fs(15), lineHeight: 1.7, fontFamily: "Georgia, serif" } }, s.text))))));
+}
+// ── MAIN APP ──────────────────────────────────────────────────────────────────
+function App() {
+    const [tab, setTab] = React.useState("read");
+    const [notes, setNotes] = React.useState({});
+    const [journal, setJournal] = React.useState([]);
+    const [savedVerses, setSavedVerses] = React.useState([]);
+    const [fontScale, setFontScale] = React.useState(1);
+    const [lastRead, setLastRead] = React.useState(null);
+    const [loading, setLoading] = React.useState(true);
+    React.useEffect(() => {
+        async function init() {
+            const n = await loadData("tbs_notes", {});
+            const j = await loadData("tbs_journal", []);
+            const s = await loadData("tbs_saved", []);
+            const fsv = await loadData("tbs_fontscale", 1);
+            const lr = await loadData("tbs_lastread", null);
+            setNotes(n);
+            setJournal(j);
+            setSavedVerses(s);
+            setFontScale(fsv);
+            setLastRead(lr);
+            setLoading(false);
+        }
+        init();
+    }, []);
+    const handleFontScale = async (v) => {
+        setFontScale(v);
+        await saveData("tbs_fontscale", v);
+    };
+    const handleLastRead = async (pos) => {
+        setLastRead(pos);
+        await saveData("tbs_lastread", pos);
+    };
+    const handleUpdateNote = async (ref, note) => {
+        const existing = notes[ref] || {};
+        const updated = Object.assign(Object.assign({}, notes), { [ref]: Object.assign(Object.assign({}, existing), { note }) });
+        setNotes(updated);
+        await saveData("tbs_notes", updated);
+    };
+    const handleUpdateJournal = async (timestamp, fields) => {
+        const updated = journal.map((j) => j.timestamp === timestamp ? Object.assign(Object.assign(Object.assign({}, j), fields), { edited: true }) : j);
+        setJournal(updated);
+        await saveData("tbs_journal", updated);
+    };
+    const handleAddNote = async (ref, note, verseText) => {
+        const updated = Object.assign(Object.assign({}, notes), { [ref]: { note, verseText, date: new Date().toLocaleDateString() } });
+        setNotes(updated);
+        await saveData("tbs_notes", updated);
+    };
+    const handleDeleteNote = async (ref) => {
+        const updated = Object.assign({}, notes);
+        delete updated[ref];
+        setNotes(updated);
+        await saveData("tbs_notes", updated);
+    };
+    const handleSaveVerse = async (verse) => {
+        const existing = savedVerses.find((s) => s.ref === verse.ref);
+        let updated;
+        if (verse.setColor) {
+            // Applying/changing a tag color — keep saved, just update color (toggle off if same color)
+            if (existing) {
+                updated = savedVerses.map((s) => s.ref === verse.ref ? Object.assign(Object.assign({}, s), { color: s.color === verse.color ? null : verse.color }) : s);
+            }
+            else {
+                updated = [...savedVerses, { ref: verse.ref, text: verse.text, book: verse.book, chapter: verse.chapter, verse: verse.verse, color: verse.color }];
+            }
+        }
+        else if (existing) {
+            updated = savedVerses.filter((s) => s.ref !== verse.ref);
+        }
+        else {
+            updated = [...savedVerses, verse];
+        }
+        setSavedVerses(updated);
+        await saveData("tbs_saved", updated);
+    };
+    const handleAddJournal = async (entry) => {
+        const updated = [...journal, entry];
+        setJournal(updated);
+        await saveData("tbs_journal", updated);
+    };
+    const handleDeleteJournal = async (timestamp) => {
+        const updated = journal.filter((j) => j.timestamp !== timestamp);
+        setJournal(updated);
+        await saveData("tbs_journal", updated);
+    };
+    const handleDeleteSaved = async (ref) => {
+        const updated = savedVerses.filter((s) => s.ref !== ref);
+        setSavedVerses(updated);
+        await saveData("tbs_saved", updated);
+    };
+    const navItems = [
+        { id: "read", icon: "📖", label: "Read" },
+        { id: "search", icon: "🔍", label: "Search" },
+        { id: "notes", icon: "📝", label: "Notes" },
+        { id: "saved", icon: "🔖", label: "Saved" },
+    ];
+    if (loading) {
+        return (React.createElement("div", { style: { minHeight: "100vh", background: C.bg, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 16 } },
+            React.createElement("div", { style: { fontSize: 48 } }, "\u271D\uFE0F"),
+            React.createElement("div", { style: { color: C.gold, fontSize: 18, fontWeight: 800, letterSpacing: 2 } }, "TRYBNUS BIBLE STUDY"),
+            React.createElement("div", { style: { color: C.silverDim, fontSize: 12 } }, "Loading...")));
+    }
+    return (React.createElement("div", { style: { minHeight: "100vh", background: C.bg, color: C.white, fontFamily: "'Georgia', serif", maxWidth: 480, margin: "0 auto", paddingBottom: 80 } },
+        React.createElement("div", { style: { position: "sticky", top: 0, background: C.bg, zIndex: 20, borderBottom: `1px solid ${C.borderDim}`, padding: "14px 16px 12px" } },
+            React.createElement("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "center" } },
+                React.createElement("div", null,
+                    React.createElement("div", { style: { fontSize: 18, fontWeight: 900, letterSpacing: 1, fontFamily: "system-ui" } },
+                        React.createElement("span", { style: { color: C.gold } }, "TRYBNUS"),
+                        React.createElement("span", { style: { color: C.purpleBright } }, " BIBLE STUDY")),
+                    React.createElement("div", { style: { fontSize: 9, color: C.silverDim, letterSpacing: 2, textTransform: "uppercase", fontFamily: "system-ui" } }, "KJV \u00B7 Enoch \u00B7 Jasher \u00B7 Commentary")),
+                React.createElement("div", { style: { textAlign: "right" } },
+                    React.createElement("div", { style: { fontSize: 9, color: C.silverDim, letterSpacing: 1, textTransform: "uppercase", fontFamily: "system-ui" } }, "Saved"),
+                    React.createElement("div", { style: { fontSize: 22, fontWeight: 900, color: C.gold, fontFamily: "system-ui" } }, savedVerses.length)))),
+        React.createElement("div", { style: { padding: 16 } },
+            tab === "read" && React.createElement(ScriptureReader, { notes: notes, onAddNote: handleAddNote, savedVerses: savedVerses, onSaveVerse: handleSaveVerse, fontScale: fontScale, onFontScale: handleFontScale, lastRead: lastRead, onLastRead: handleLastRead }),
+            tab === "search" && React.createElement(Search, { notes: notes, savedVerses: savedVerses, fontScale: fontScale }),
+            tab === "notes" && React.createElement(NotesView, { notes: notes, journal: journal, fontScale: fontScale, onAddJournal: handleAddJournal, onUpdateJournal: handleUpdateJournal, onDeleteNote: handleDeleteNote, onDeleteJournal: handleDeleteJournal, onUpdateNote: handleUpdateNote }),
+            tab === "saved" && React.createElement(SavedView, { savedVerses: savedVerses, onDelete: handleDeleteSaved, fontScale: fontScale })),
+        React.createElement("div", { style: { position: "fixed", bottom: 0, left: "50%", transform: "translateX(-50%)", width: "100%", maxWidth: 480, background: C.bg, borderTop: `1px solid ${C.borderDim}`, display: "flex", padding: "8px 0 14px" } }, navItems.map((t) => (React.createElement("button", { key: t.id, onClick: () => setTab(t.id), style: { flex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 3, background: "none", border: "none", cursor: "pointer", padding: "4px 0" } },
+            React.createElement("span", { style: { fontSize: 20 } }, t.icon),
+            React.createElement("span", { style: { fontSize: 9, color: tab === t.id ? C.goldBright : C.silverDim, fontWeight: tab === t.id ? 800 : 400, letterSpacing: 0.5, textTransform: "uppercase", fontFamily: "system-ui" } }, t.label)))))));
+}
+ReactDOM.render(React.createElement(App), document.getElementById("root"));
+
+  </script>
+</body>
+</html>
